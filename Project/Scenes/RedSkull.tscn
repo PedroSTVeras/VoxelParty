@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Models/Knight.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/RedSkull.vox" type="ArrayMesh" id=1]
 
-[node name="Knight" type="Spatial" index="0"]
+[node name="RedSkull" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -20,6 +20,6 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 
