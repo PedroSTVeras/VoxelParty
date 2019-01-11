@@ -1,10 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Models/Knight.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Dices/Dice1.vox" type="ArrayMesh" id=1]
 
-[node name="Knight" type="Spatial" index="0"]
-
-_sections_unfolded = [ "Transform" ]
+[node name="Dice2" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
