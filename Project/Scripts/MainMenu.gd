@@ -8,7 +8,7 @@ onready var optionsButton = $Buttons/Options
 onready var exitButton = $Buttons/Exit
 
 #Arrow
-onready var arrow = $Arrow
+onready var arrow = $Panel
 
 #Selected Button
 var buttonNum = 0
@@ -31,7 +31,7 @@ func _process(delta):
 			buttonNum = 0
 	
 	#Move arrow
-	arrow.rect_position.y = 210 + buttonNum * 60;
+	arrow.rect_position.y = 230 + buttonNum * 60;
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
@@ -43,7 +43,7 @@ func _process(delta):
 	pass
 
 func PlayGame():
-	get_tree().change_scene("res://Scenes/Menus/PlayerSelectMenu.tscn");
+	get_tree().change_scene("res://Scenes/Menus/MapSelectMenu.tscn");
 	pass
 
 func ExitGame():
