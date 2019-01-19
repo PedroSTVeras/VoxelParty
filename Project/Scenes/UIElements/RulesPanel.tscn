@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/UIElements/MapPanel.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/UIElements/RulesPanel.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/UIElements/Stats.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -13,21 +14,13 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 75
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=3]
-
 size = 32
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MapPanel" type="Panel"]
+[node name="RulesPanel" type="Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -42,9 +35,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Visibility" ]
+_sections_unfolded = [ "Focus", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
-[node name="MapTitle" type="Label" parent="." index="0"]
+[node name="RulesTitle" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -59,93 +52,86 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "Map"
+text = "Rules"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="MapNumber" type="Label" parent="." index="1"]
+[node name="Panel" type="PanelContainer" parent="." index="1"]
 
+modulate = Color( 1, 0.4, 0.4, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 320.0
+margin_left = 140.0
 margin_top = 70.0
-margin_right = 500.0
-margin_bottom = 126.0
+margin_right = 680.0
+margin_bottom = 150.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="LeftButton" type="Button" parent="." index="2"]
+[node name="AllStats" type="Control" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 80.0
-margin_top = 200.0
-margin_right = 130.0
-margin_bottom = 339.0
+margin_right = 40.0
+margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "<"
-flat = false
-align = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_fonts" ]
 
-[node name="RightButton" type="Button" parent="." index="3"]
+[node name="Stats" parent="AllStats" index="0" instance=ExtResource( 3 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 690.0
-margin_top = 200.0
-margin_right = 740.0
-margin_bottom = 339.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = ">"
-flat = false
-align = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_fonts" ]
+margin_left = 150.0
+margin_top = 80.0
+margin_right = 670.0
+margin_bottom = 140.0
+_sections_unfolded = [ "Rect" ]
 
-[node name="NextPanel" type="PanelContainer" parent="." index="4"]
+[node name="Stats2" parent="AllStats" index="1" instance=ExtResource( 3 )]
 
+margin_left = 150.0
+margin_top = 160.0
+margin_right = 670.0
+margin_bottom = 220.0
+
+[node name="Stats3" parent="AllStats" index="2" instance=ExtResource( 3 )]
+
+margin_left = 150.0
+margin_top = 240.0
+margin_right = 670.0
+margin_bottom = 300.0
+
+[node name="Stats4" parent="AllStats" index="3" instance=ExtResource( 3 )]
+
+margin_left = 150.0
+margin_top = 320.0
+margin_right = 670.0
+margin_bottom = 380.0
+
+[node name="Stats5" parent="AllStats" index="4" instance=ExtResource( 3 )]
+
+margin_left = 150.0
+margin_top = 400.0
+margin_right = 670.0
+margin_bottom = 460.0
+
+[node name="NextPanel" type="PanelContainer" parent="." index="3"]
+
+visible = false
 modulate = Color( 1, 0.4, 0.4, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -163,7 +149,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="PlayButton" type="Button" parent="." index="5"]
+[node name="PlayButton" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -180,12 +166,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Next"
+text = "Play"
 flat = false
 align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_fonts" ]
