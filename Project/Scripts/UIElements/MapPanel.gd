@@ -4,7 +4,13 @@ onready var playButton = $PlayButton
 onready var leftButton = $LeftButton
 onready var rightButton = $RightButton
 
+onready var leftPanel = $LeftPanel
+onready var rightPanel = $RightPanel
+onready var nextPanel = $NextPanel
+
 onready var mapNumber = $MapNumber
+
+var row = 0
 
 func _ready():
 	leftButton.connect("pressed", self, "PrevMap")
@@ -15,13 +21,30 @@ func _ready():
 func _process(delta):
 	mapNumber.set_text(str(Global.map))
 	
-	if Input.is_action_just_pressed("ui_leftJoy_right") || Input.is_action_just_pressed("ui_right"):
-		NextMap()
-	if Input.is_action_just_pressed("ui_leftJoy_left") || Input.is_action_just_pressed("ui_left"):
-		PrevMap()
+	if Input.is_action_just_pressed("ui_leftJoy_up") || Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_leftJoy_down") || Input.is_action_just_pressed("ui_down"):
+		if row == 0:
+			row = 1
+		else:
+			row = 0
 	
-	if Input.is_action_just_pressed("ui_A"):
-		NextScreen()
+	if row == 0:
+		if Input.is_action_just_pressed("ui_leftJoy_right") || Input.is_action_just_pressed("ui_right"):
+			NextMap()
+		if Input.is_action_just_pressed("ui_leftJoy_left") || Input.is_action_just_pressed("ui_left"):
+			PrevMap()
+		
+		rightPanel.show()
+		leftPanel.show()
+		nextPanel.hide()
+	
+	if row == 1:
+		if Input.is_action_just_pressed("ui_A"):
+			NextScreen()
+		
+		rightPanel.hide()
+		leftPanel.hide()
+		nextPanel.show()
+	
 	pass
 
 func NextMap():

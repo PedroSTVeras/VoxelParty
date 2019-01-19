@@ -33,7 +33,8 @@ func _process(delta):
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
-		NextScreen()
+		if row == 5:
+			NextScreen()
 	
 	pass
 
