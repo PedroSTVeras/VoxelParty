@@ -2,8 +2,7 @@
 
 [ext_resource path="res://Models/Characthers/RedSkull.vox" type="ArrayMesh" id=1]
 
-
-[node name="RedSkull" type="Spatial" index="0"]
+[node name="RedSkull" type="Spatial"]
 
 _sections_unfolded = [ "Transform" ]
 

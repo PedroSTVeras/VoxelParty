@@ -60,3 +60,6 @@ func PrevMap():
 func NextScreen():
 	get_tree().change_scene("res://Scenes/Menus/PlayerSelectMenu.tscn");
 
+func PrevScreen():
+	get_tree().change_scene("res://Scenes/Main.tscn");
+

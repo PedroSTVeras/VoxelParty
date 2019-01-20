@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/InstanceCharacter.gd" type="Script" id=1]
+[ext_resource path="res://Models/Spaces/StartSpace.vox" type="ArrayMesh" id=2]
+[ext_resource path="res://Scenes/Characters/Knight.tscn" type="PackedScene" id=3]
+
+[node name="StartSpace" type="Spatial"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="Knight" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 30, 5, 30 )
+visible = false
+
+

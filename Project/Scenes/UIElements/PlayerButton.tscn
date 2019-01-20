@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/UIElements/PlayerButton.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/playerMap.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/RedSkullIcon.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -36,6 +38,7 @@ flat = false
 align = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material" ]
+numID = null
 
 [node name="PlayerName" type="ColorRect" parent="." index="0"]
 
@@ -78,6 +81,53 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
+[node name="NumberPanel" type="ColorRect" parent="PlayerName" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -160.0
+margin_right = 40.0
+margin_bottom = -120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.317524, 0.304077, 0.734375, 0.414353 )
+
+[node name="Number" type="Label" parent="PlayerName/NumberPanel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_right = 30.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="PlayerName" index="2"]
+
+position = Vector2( 90, -60 )
+scale = Vector2( 6.125, 6.125 )
+texture = ExtResource( 3 )
+
 [node name="CPUName" type="ColorRect" parent="." index="1"]
 
 visible = false
@@ -118,5 +168,11 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="CPUName" index="1"]
+
+position = Vector2( 91, -59 )
+scale = Vector2( 6.125, 6.125 )
+texture = ExtResource( 4 )
 
 

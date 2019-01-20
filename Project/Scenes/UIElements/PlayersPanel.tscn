@@ -80,7 +80,6 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect",
 
 [node name="PlayerButtons" type="Control" parent="." index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -96,46 +95,119 @@ size_flags_vertical = 1
 
 [node name="PlayerButton1" parent="PlayerButtons" index="0" instance=ExtResource( 3 )]
 
+editor/display_folded = true
+numID = 1
+
 [node name="PlayerButton2" parent="PlayerButtons" index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 220.0
 margin_right = 400.0
+numID = 2
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton2" index="0"]
+
+color = Color( 0.304077, 0.734375, 0.431822, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton2/PlayerName" index="1"]
+
+color = Color( 0.304077, 0.734375, 0.431822, 0.414353 )
 
 [node name="PlayerButton3" parent="PlayerButtons" index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 420.0
 margin_right = 600.0
+numID = 3
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton3" index="0"]
+
+color = Color( 0.734375, 0.697396, 0.304077, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton3/PlayerName" index="1"]
+
+color = Color( 0.734375, 0.697396, 0.304077, 0.414353 )
 
 [node name="PlayerButton4" parent="PlayerButtons" index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 620.0
 margin_right = 800.0
+numID = 4
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton4" index="0"]
+
+color = Color( 0.734375, 0.334332, 0.304077, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton4/PlayerName" index="1"]
+
+color = Color( 0.734375, 0.334332, 0.304077, 0.414353 )
 
 [node name="PlayerButton5" parent="PlayerButtons" index="4" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_top = 290.0
 margin_bottom = 500.0
+numID = 5
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton5" index="0"]
+
+color = Color( 0.734375, 0.304077, 0.717566, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton5/PlayerName" index="1"]
+
+color = Color( 0.734375, 0.304077, 0.717566, 0.414353 )
 
 [node name="PlayerButton6" parent="PlayerButtons" index="5" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 220.0
 margin_top = 290.0
 margin_right = 400.0
 margin_bottom = 500.0
+numID = 6
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton6" index="0"]
+
+color = Color( 0.124878, 0.726563, 0.698359, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton6/PlayerName" index="1"]
+
+color = Color( 0.124878, 0.726563, 0.698359, 0.414353 )
 
 [node name="PlayerButton7" parent="PlayerButtons" index="6" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 420.0
 margin_top = 290.0
 margin_right = 600.0
 margin_bottom = 500.0
+numID = 7
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton7" index="0"]
+
+color = Color( 1, 1, 1, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton7/PlayerName" index="1"]
+
+color = Color( 1, 1, 1, 0.414353 )
 
 [node name="PlayerButton8" parent="PlayerButtons" index="7" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 620.0
 margin_top = 290.0
 margin_right = 800.0
 margin_bottom = 500.0
+numID = 8
+
+[node name="PlayerName" parent="PlayerButtons/PlayerButton8" index="0"]
+
+color = Color( 0, 0, 0, 0.414353 )
+
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton8/PlayerName" index="1"]
+
+color = Color( 0, 0, 0, 0.414353 )
 
 [node name="NextPanel" type="PanelContainer" parent="." index="3"]
 
@@ -185,3 +257,11 @@ align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_fonts" ]
 
 
+[editable path="PlayerButtons/PlayerButton1"]
+[editable path="PlayerButtons/PlayerButton2"]
+[editable path="PlayerButtons/PlayerButton3"]
+[editable path="PlayerButtons/PlayerButton4"]
+[editable path="PlayerButtons/PlayerButton5"]
+[editable path="PlayerButtons/PlayerButton6"]
+[editable path="PlayerButtons/PlayerButton7"]
+[editable path="PlayerButtons/PlayerButton8"]

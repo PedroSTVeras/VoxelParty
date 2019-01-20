@@ -3,14 +3,19 @@ extends Button
 #Buttons
 onready var playerName = $PlayerName
 onready var CPUName = $CPUName
+onready var number = $PlayerName/NumberPanel/Number
+
+export(int) var numID
 
 var type = 0
 
 func _ready():
+	number.set_text(str(numID))
 	self.connect("pressed", self, "ChangeType")
 	pass
 
 func _process(delta):
+	Global.chosenPlayers[numID-1] = type 
 	pass
 
 func ChangeType():
