@@ -45,6 +45,9 @@ func _process(delta):
 		leftPanel.hide()
 		nextPanel.show()
 	
+	if Input.is_action_just_pressed("ui_B"):
+		PrevScreen()
+	
 	pass
 
 func NextMap():

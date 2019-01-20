@@ -36,7 +36,13 @@ func _process(delta):
 		if row == 5:
 			NextScreen()
 	
+	if Input.is_action_just_pressed("ui_B"):
+		PrevScreen()
+	
 	pass
 
 func NextScreen():
 	get_tree().change_scene("res://Scenes/Map/TestMap.tscn");
+	
+func PrevScreen():
+	get_tree().change_scene("res://Scenes/Menus/PlayerSelectMenu.tscn");

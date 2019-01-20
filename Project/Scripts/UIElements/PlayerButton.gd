@@ -12,6 +12,10 @@ var type = 0
 func _ready():
 	number.set_text(str(numID))
 	self.connect("pressed", self, "ChangeType")
+	
+	type = Global.chosenPlayers[numID-1]
+	type -= 1
+	ChangeType()
 	pass
 
 func _process(delta):
@@ -22,7 +26,7 @@ func ChangeType():
 	type += 1;
 	
 	#Go back to 0
-	if (type == 3):
+	if (type >= 3 || type <= -1):
 		type = 0
 	
 	#No character
