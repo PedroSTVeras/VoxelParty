@@ -1,0 +1,13 @@
+[remap]
+
+importer="MagicaVoxel-Importer"
+type="Mesh"
+path="res://.import/Princess.vox-e79ae94aec9644c1c46d191fa2a8b1b6.mesh"
+
+[deps]
+
+source_file="res://Models/Characthers/Princess.vox"
+dest_files=[ "res://.import/Princess.vox-e79ae94aec9644c1c46d191fa2a8b1b6.mesh" ]
+
+[params]
+

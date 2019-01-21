@@ -23,7 +23,7 @@ func _process(delta):
 			row = 0
 	
 	#Move arrow
-	selectPanel.rect_position.y = 70 + row * 80;
+	selectPanel.rect_position.y = 80 + row * 80;
 	if row == 5:
 		selectPanel.hide()
 		selectPanel2.show()

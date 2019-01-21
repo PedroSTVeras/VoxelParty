@@ -51,4 +51,5 @@ func Resume():
 	Global.paused = false
 
 func Exit():
+	Global.paused = false
 	get_tree().change_scene("res://Scenes/Main.tscn");

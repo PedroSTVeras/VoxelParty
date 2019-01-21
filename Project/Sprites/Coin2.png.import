@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KnightIcon.png-21cfeec1b42e56e62bf4e3b3fc54f2d8.stex"
+path="res://.import/Coin2.png-9f5bdbcd95d2f3715f3e5bba9a699f0a.stex"
 
 [deps]
 
-source_file="res://Sprites/KnightIcon.png"
-dest_files=[ "res://.import/KnightIcon.png-21cfeec1b42e56e62bf4e3b3fc54f2d8.stex" ]
+source_file="res://Sprites/Coin2.png"
+dest_files=[ "res://.import/Coin2.png-9f5bdbcd95d2f3715f3e5bba9a699f0a.stex" ]
 
 [params]
 

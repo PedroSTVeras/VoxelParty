@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Models/Characthers/Knight.vox" type="ArrayMesh" id=1]
 
-[node name="Knight" type="Spatial" index="0"]
+[node name="Knight" type="Spatial"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -20,6 +20,23 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="Camera" type="Camera" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.1012, 12.4464 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 65.0
+size = 1.0
+near = 0.1
+far = 100.0
 _sections_unfolded = [ "Transform" ]
 
 

@@ -31,7 +31,7 @@ func _process(delta):
 			buttonNum = 0
 	
 	#Move arrow
-	arrow.rect_position.y = 230 + buttonNum * 60;
+	arrow.rect_position.y = 220 + buttonNum * 70;
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
