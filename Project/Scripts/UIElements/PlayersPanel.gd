@@ -43,12 +43,24 @@ func _process(delta):
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
-		#Change character
+		#Change type (Player/CPU)
 		if (row !=2):
 			get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).ChangeType()
+		#Go to next screen
 		else:
 			NextScreen()
 	
+	#Change character
+	if Input.is_action_just_pressed("ui_R2"):
+		if (row !=2):
+			get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).charNumber += 1
+			get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).ChangeCharacter()
+	if Input.is_action_just_pressed("ui_L2"):
+		if (row !=2):
+			get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).charNumber -= 1
+			get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).ChangeCharacter()
+	
+	#Go back
 	if Input.is_action_just_pressed("ui_B"):
 		PrevScreen()
 	

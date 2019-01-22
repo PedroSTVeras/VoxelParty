@@ -98,11 +98,7 @@ size_flags_vertical = 1
 _sections_unfolded = [ "Material", "Visibility" ]
 numID = 1
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton1" index="0"]
-
-_sections_unfolded = [ "Visibility" ]
-
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton1/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton1/PlayerName" index="1"]
 
 _sections_unfolded = [ "Visibility" ]
 
@@ -113,12 +109,11 @@ margin_right = 400.0
 _sections_unfolded = [ "Material", "Visibility" ]
 numID = 2
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton2" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton2" index="3"]
 
 color = Color( 0.304077, 0.734375, 0.431822, 0.414353 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton2/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton2/PlayerName" index="1"]
 
 color = Color( 0.304077, 0.734375, 0.431822, 0.414353 )
 
@@ -128,11 +123,11 @@ margin_left = 420.0
 margin_right = 600.0
 numID = 3
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton3" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton3" index="3"]
 
 color = Color( 0.734375, 0.697396, 0.304077, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton3/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton3/PlayerName" index="1"]
 
 color = Color( 0.734375, 0.697396, 0.304077, 0.414353 )
 
@@ -142,11 +137,11 @@ margin_left = 620.0
 margin_right = 800.0
 numID = 4
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton4" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton4" index="3"]
 
 color = Color( 0.734375, 0.334332, 0.304077, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton4/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton4/PlayerName" index="1"]
 
 color = Color( 0.734375, 0.334332, 0.304077, 0.414353 )
 
@@ -156,11 +151,11 @@ margin_top = 290.0
 margin_bottom = 500.0
 numID = 5
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton5" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton5" index="3"]
 
 color = Color( 0.734375, 0.304077, 0.717566, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton5/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton5/PlayerName" index="1"]
 
 color = Color( 0.734375, 0.304077, 0.717566, 0.414353 )
 
@@ -172,11 +167,11 @@ margin_right = 400.0
 margin_bottom = 500.0
 numID = 6
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton6" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton6" index="3"]
 
 color = Color( 0.124878, 0.726563, 0.698359, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton6/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton6/PlayerName" index="1"]
 
 color = Color( 0.124878, 0.726563, 0.698359, 0.414353 )
 
@@ -188,11 +183,11 @@ margin_right = 600.0
 margin_bottom = 500.0
 numID = 7
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton7" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton7" index="3"]
 
 color = Color( 1, 1, 1, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton7/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton7/PlayerName" index="1"]
 
 color = Color( 1, 1, 1, 0.414353 )
 
@@ -204,11 +199,11 @@ margin_right = 800.0
 margin_bottom = 500.0
 numID = 8
 
-[node name="PlayerName" parent="PlayerButtons/PlayerButton8" index="0"]
+[node name="PlayerName" parent="PlayerButtons/PlayerButton8" index="3"]
 
 color = Color( 0, 0, 0, 0.414353 )
 
-[node name="NumberPanel" parent="PlayerButtons/PlayerButton8/PlayerName" index="2"]
+[node name="NumberPanel" parent="PlayerButtons/PlayerButton8/PlayerName" index="1"]
 
 color = Color( 0, 0, 0, 0.414353 )
 

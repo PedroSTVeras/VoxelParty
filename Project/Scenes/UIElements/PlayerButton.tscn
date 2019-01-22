@@ -1,17 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/UIElements/PlayerButton.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Characters/Knight.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/playerMap.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=4]
-[ext_resource path="res://Sprites/RedSkullIcon.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Characters/Hero.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 25
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 4 )
+font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="PlayerButton" type="Button" index="0"]
@@ -23,7 +21,7 @@ anchor_bottom = 0.0
 margin_left = 20.0
 margin_top = 60.0
 margin_right = 200.0
-margin_bottom = 270.0
+margin_bottom = 220.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -41,9 +39,31 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Material" ]
 numID = null
 
-[node name="Viewport" type="Viewport" parent="." index="0"]
+[node name="TypeButton" type="Button" parent="." index="0"]
 
-editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 160.0
+margin_right = 180.0
+margin_bottom = 210.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Viewport" type="Viewport" parent="." index="1"]
+
 arvr = false
 size = Vector2( 29, 32 )
 own_world = true
@@ -69,19 +89,26 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Audio Listener", "GUI", "Physics", "Render Target", "Rendering", "Shadow Atlas" ]
 
-[node name="Knight" parent="Viewport" index="0" instance=ExtResource( 2 )]
+[node name="Hero" parent="Viewport" index="0" instance=ExtResource( 2 )]
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="MeshInstance" parent="Viewport/Hero" index="0"]
+
+_sections_unfolded = [ "Geometry", "Transform" ]
+
+[node name="Camera" parent="Viewport/Hero" index="1"]
+
+current = true
+
+[node name="Sprite" type="Sprite" parent="." index="2"]
 
 visible = false
 position = Vector2( 90, 100 )
 scale = Vector2( 6.125, 6.125 )
-texture = ExtResource( 3 )
 flip_h = true
 flip_v = true
 _sections_unfolded = [ "Animation", "Offset", "Region" ]
 
-[node name="PlayerName" type="ColorRect" parent="." index="2"]
+[node name="PlayerName" type="ColorRect" parent="." index="3"]
 
 visible = false
 anchor_left = 0.0
@@ -98,6 +125,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0.317524, 0.304077, 0.734375, 0.414353 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
 [node name="Name" type="Label" parent="PlayerName" index="0"]
 
@@ -164,7 +192,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="CPUName" type="ColorRect" parent="." index="3"]
+[node name="CPUName" type="ColorRect" parent="." index="4"]
 
 visible = false
 anchor_left = 0.0
@@ -205,11 +233,5 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Sprite" type="Sprite" parent="CPUName" index="1"]
 
-visible = false
-position = Vector2( 91, -59 )
-scale = Vector2( 6.125, 6.125 )
-texture = ExtResource( 5 )
-
-
+[editable path="Viewport/Hero"]

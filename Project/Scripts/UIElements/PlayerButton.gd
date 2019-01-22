@@ -4,35 +4,66 @@ extends Button
 onready var playerName = $PlayerName
 onready var CPUName = $CPUName
 onready var number = $PlayerName/NumberPanel/Number
+onready var typeButton = $TypeButton
 
 var viewport = null
 var viewport_sprite = null
 
+var mesh
+var models = []
+var type = 0
+var charNumber = 0
+
 export(int) var numID
 
-var type = 0
-
 func _ready():
-	number.set_text(str(numID))
-	self.connect("pressed", self, "ChangeType")
-	
 	viewport = get_node("Viewport")
 	viewport_sprite = get_node("Sprite")
-	viewport.set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
-	yield(get_tree(), "idle_frame")
-	yield(get_tree(), "idle_frame")
-	viewport_sprite.texture = viewport.get_texture()
 	
-	type = Global.chosenPlayers[numID-1]
+	#Load Models
+	models.resize(3)
+	models[0] = load("res://Models/Characthers/Knight.vox")
+	models[1] = load("res://Models/Characthers/RedSkull.vox")
+	models[2] = load("res://Models/Characthers/Hero.vox")
+	
+	#Set player numbers and buttons
+	number.set_text(str(numID))
+	self.connect("pressed", self, "ChangeCharacter")
+	typeButton.connect("pressed",self, "ChangeType")
+	
+	#Set character and type
+	#type = Global.chosenPlayers[numID-1]
 	type -= 1
+	ChangeCharacter()
 	ChangeType()
 	
 	pass
 
 func _process(delta):
-	Global.chosenPlayers[numID-1] = type 
+	Global.chosenPlayers[numID-1] = type
 	pass
 
+func ChangeCharacter():
+	if type != 0:
+		#Fix char number
+		if charNumber <= -1:
+			charNumber = models.size()-1
+			charNumber = models.size()-1
+		elif charNumber >= models.size():
+			charNumber = 0
+			charNumber = 0
+		
+		#Change mesh
+		var mesh = $Viewport/Hero/MeshInstance
+		mesh.mesh = models[charNumber]
+		
+		#Get texture
+		viewport.set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		viewport_sprite.texture = viewport.get_texture()
+
+#Change type: No player, player, CPU
 func ChangeType():
 	type += 1;
 	
