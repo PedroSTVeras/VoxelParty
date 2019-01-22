@@ -44,6 +44,7 @@ func _process(delta):
 	Global.chosenModelPlayers[numID-1] = charNumber
 	pass
 
+#Change model
 func ChangeCharacter():
 	if type != 0:
 		#Fix char number
@@ -55,7 +56,7 @@ func ChangeCharacter():
 			charNumber = 0
 		
 		#Change mesh
-		var mesh = $Viewport/Hero/MeshInstance
+		var mesh = $Viewport/CharacterShots/MeshInstance
 		mesh.mesh = models[charNumber]
 		
 		#Get texture

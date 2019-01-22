@@ -34,15 +34,16 @@ func _process(delta):
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
 		if row == 5:
-			NextScreen()
+			NextScreen() 
 	
 	if Input.is_action_just_pressed("ui_B"):
 		PrevScreen()
 	
 	pass
 
+#Play game (load map/create character)
 func NextScreen():
 	get_tree().change_scene("res://Scenes/Map/TestMap.tscn");
-	
+
 func PrevScreen():
 	get_tree().change_scene("res://Scenes/Menus/PlayerSelectMenu.tscn");

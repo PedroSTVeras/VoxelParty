@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Node
 
 #If game is paused
 var paused = false
@@ -21,12 +21,5 @@ func _ready():
 	chosenModelPlayers.resize(8)
 	for x in range (8):
 		chosenModelPlayers[x] = 0
-	
-	players.resize(8)
-	pass
-
-func _process(delta):
-	#if Input.is_action_just_pressed("ui_cancel"):
-	#	get_tree().quit()
 	
 	pass

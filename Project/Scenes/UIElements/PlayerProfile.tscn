@@ -1,17 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/UIElements/PlayerProfile.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/KnightIcon.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprites/Heart.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Coin2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Ode to Idle Gaming.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Heart.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Coin2.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 19
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -19,7 +18,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="PlayerProfile" type="Control"]
@@ -71,7 +70,6 @@ __meta__ = {
 
 position = Vector2( 167.501, 57.6455 )
 scale = Vector2( 5, 5 )
-texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -107,7 +105,7 @@ __meta__ = {
 
 position = Vector2( 28.6136, 54.0208 )
 scale = Vector2( 3.77778, 4.25 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -142,7 +140,7 @@ __meta__ = {
 
 position = Vector2( 26.5391, 94.245 )
 scale = Vector2( 2.33033, 2.2648 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }

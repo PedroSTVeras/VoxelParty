@@ -12,6 +12,3 @@ func _ready():
 	if (Global.chosenTypePlayers[numID-1] == 0):
 		self.hide()
 	pass
-
-func _process(delta):
-	pass
