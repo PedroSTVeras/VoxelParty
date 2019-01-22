@@ -2,17 +2,22 @@ extends Spatial
 
 var Knight = preload("res://Scenes/Characters/Knight.tscn")
 var RedSkull = preload("res://Scenes/Characters/RedSkull.tscn")
+var Hero = preload("res://Scenes/Characters/Hero.tscn")
 
 var players = Global.players
 
 func _ready():
 	for aux in range(8):
-		if Global.chosenPlayers[aux] == 1:
-			players[aux] = Knight.instance()
-			AdjustChar(aux)
-		elif Global.chosenPlayers[aux] == 2:
-			players[aux] = RedSkull.instance()
-			AdjustChar(aux)
+		if Global.chosenTypePlayers[aux] != 0:
+			if Global.chosenModelPlayers[aux] == 0:
+				players[aux] = Knight.instance()
+				AdjustChar(aux)
+			elif Global.chosenModelPlayers[aux] == 1:
+				players[aux] = RedSkull.instance()
+				AdjustChar(aux)
+			elif Global.chosenModelPlayers[aux] == 2:
+				players[aux] = Hero.instance()
+				AdjustChar(aux)
 		
 	pass
 

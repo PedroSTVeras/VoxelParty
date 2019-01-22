@@ -40,7 +40,8 @@ func _ready():
 	pass
 
 func _process(delta):
-	Global.chosenPlayers[numID-1] = type
+	Global.chosenTypePlayers[numID-1] = type
+	Global.chosenModelPlayers[numID-1] = charNumber
 	pass
 
 func ChangeCharacter():
