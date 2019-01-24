@@ -36,7 +36,9 @@ func _ready():
 			
 			#Instance profiles
 			players[num].profile = profile.instance()
-			players[num].profile.numID = aux +1
+			players[num].profile.num = num
+			players[num].colorID = aux +1
+			players[num].modelID = Global.chosenModelPlayers[aux]
 			#Set positon
 			players[num].profile.rect_position += Vector2(20 + 425*num, 720)
 			if num >= 4:

@@ -64,6 +64,7 @@ func ChangeCharacter():
 		yield(get_tree(), "idle_frame")
 		yield(get_tree(), "idle_frame")
 		viewport_sprite.texture = viewport.get_texture()
+		viewport_sprite.scale = Vector2(5.75,5.75)
 
 #Change type: No player, player, CPU
 func ChangeType():

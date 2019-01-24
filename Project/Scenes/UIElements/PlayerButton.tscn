@@ -65,7 +65,7 @@ align = 1
 [node name="Viewport" type="Viewport" parent="." index="1"]
 
 arvr = false
-size = Vector2( 29, 32 )
+size = Vector2( 30, 30 )
 own_world = true
 world = null
 transparent_bg = true
