@@ -3,7 +3,7 @@ extends Control
 onready var panel = $Panel
 onready var pName = $Name
 
-var num
+var modelID
 var colorID
 
 var viewport = null
@@ -12,7 +12,7 @@ var viewport_sprite = null
 var models = []
 
 func _ready():
-	colorID = Global.players[num].colorID
+	#colorID = Global.players[num].colorID
 	#Load Models
 	models.resize(3)
 	models[0] = load("res://Models/Characthers/Knight.vox")
@@ -43,7 +43,7 @@ func _ready():
 	
 	#Change mesh
 	var mesh = $Viewport/CharacterShots/MeshInstance
-	mesh.mesh = models[Global.players[num].modelID]
+	mesh.mesh = models[modelID]#Global.players[num].modelID]
 	
 	#Viewport
 	viewport = get_node("Viewport")

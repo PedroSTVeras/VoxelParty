@@ -23,34 +23,48 @@ func _ready():
 			players.resize(num+1)
 			players[num] = playerClass.new()
 			
-			#Instance models on classes
-			if Global.chosenModelPlayers[aux] == 0:
-				players[num].model = Knight.instance()
-				AdjustChar(num)
-			elif Global.chosenModelPlayers[aux] == 1:
-				players[num].model = RedSkull.instance()
-				AdjustChar(num)
-			elif Global.chosenModelPlayers[aux] == 2:
-				players[num].model = Hero.instance()
-				AdjustChar(num)
-			
 			#Set color and model ID
 			players[num].colorID = aux +1
 			players[num].modelID = Global.chosenModelPlayers[aux]
 			
 			#Instance profiles
 			players[num].profile = profile.instance()
-			players[num].profile.num = num
+			players[num].profile.colorID = players[num].colorID
+			players[num].profile.modelID = players[num].modelID
 			
-			#Set positon
-			players[num].profile.rect_position += Vector2(20 + 425*num, 720)
-			if num >= 4:
-				players[num].profile.rect_position += Vector2(20 + 425*(num-4), 20)
-			add_child(players[num].profile)
 			num +=1
+	
+	#Randomize list
+	players = Global.shuffleList(players)
+	
+	for aux in range(players.size()):
+		#Instance models on classes
+		AddChars(aux)
+		
+		#Set positon of Profile
+		SetProfiles(aux)
 	pass
 
-#Adds characters to scene and properly places them in the scene
+#Instance models on classes
+func AddChars(num):
+	if players[num].modelID == 0:
+		players[num].model = Knight.instance()
+		AdjustChar(num)
+	elif players[num].modelID == 1:
+		players[num].model = RedSkull.instance()
+		AdjustChar(num)
+	elif players[num].modelID == 2:
+		players[num].model = Hero.instance()
+		AdjustChar(num)
+
+#Set positon of Profile
+func SetProfiles(num):
+	players[num].profile.rect_position += Vector2(20 + 425*num, 720)
+	if num >= 4:
+		players[num].profile.rect_position += Vector2(20 + 425*(num-4), 20)
+	add_child(players[num].profile)
+
+#Properly places characters in the scene
 func AdjustChar(var aux):
 	add_child(players[aux].model)
 	players[aux].model.rotation_degrees.y = 90
@@ -58,11 +72,14 @@ func AdjustChar(var aux):
 	if aux == 0:
 		players[aux].model.translation = Vector3(30,5,30)
 	elif aux == 1:
-		players[aux].model.translation = Vector3(30,5,0)
-	elif aux == 2:
 		players[aux].model.translation = Vector3(30,5,-30)
+		#players[aux].model.translation = Vector3(30,5,0)
+	elif aux == 2:
+		players[aux].model.translation = Vector3(-30,5,30)
+		#players[aux].model.translation = Vector3(30,5,-30)
 	elif aux == 3:
-		players[aux].model.translation = Vector3(0,5,15)
+		players[aux].model.translation = Vector3(-30,5,-30)
+		#players[aux].model.translation = Vector3(0,5,15)
 	elif aux == 4:
 		players[aux].model.translation = Vector3(0,5,-15)
 	elif aux == 5:

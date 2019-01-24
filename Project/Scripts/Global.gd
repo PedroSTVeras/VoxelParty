@@ -25,3 +25,27 @@ func _ready():
 		chosenModelPlayers[x] = 0
 	
 	pass
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+	
+	pass
+
+func shuffleList(list):
+	var shuffledList = []
+	var indexList = range(list.size())
+	for i in range(list.size()):
+		randomize()
+		var x = randi()%indexList.size()
+		shuffledList.append(list[x])
+		indexList.remove(x)
+		list.remove(x)
+	return shuffledList
+
+
+
+
+
+
+

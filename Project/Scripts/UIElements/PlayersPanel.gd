@@ -23,11 +23,11 @@ func _process(delta):
 		if column <= -1:
 			column = 3
 	if Input.is_action_just_pressed("ui_leftJoy_up") || Input.is_action_just_pressed("ui_up"):
-		row -= 1
+		row -= 2
 		if row <= -1:
 			row = 2
 	if Input.is_action_just_pressed("ui_leftJoy_down") || Input.is_action_just_pressed("ui_down"):
-		row += 1
+		row += 2
 		if row >= 3:
 			row = 0
 	
