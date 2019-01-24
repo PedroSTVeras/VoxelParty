@@ -1,6 +1,6 @@
 extends Control
 
-onready var selectPanel = $Panel2
+onready var selectPanel = $Panel
 
 onready var resumeButton = $ResumeButton
 onready var optionsButton = $OptionsButton
@@ -34,6 +34,14 @@ func _process(delta):
 			if row >= 3:
 				row = 0
 		
+		#Move panel
+		if row == 0:
+			selectPanel.rect_position = resumeButton.rect_position + Vector2(-10,-10)
+		elif row == 1:
+			selectPanel.rect_position = optionsButton.rect_position + Vector2(-10,-10)
+		elif row == 2:
+			selectPanel.rect_position = exitButton.rect_position + Vector2(-10,-10)
+		
 		#Activate selected button
 		if Input.is_action_just_pressed("ui_A"):
 			#Resume
@@ -41,8 +49,6 @@ func _process(delta):
 				Resume()
 			elif (row == 2):
 				Exit()
-		
-		selectPanel.rect_position.y = 180 + row * 130;
 	
 	pass
 

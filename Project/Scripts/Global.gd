@@ -1,3 +1,5 @@
+#1536 x 864
+
 extends Node
 
 #If game is paused

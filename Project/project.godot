@@ -20,7 +20,11 @@ Global="*res://Scripts/Global.gd"
 
 [display]
 
-window/size/width=820
+window/size/width=1540
+window/size/height=860
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+window/stretch/shrink="1"
 
 [editor_plugins]
 

@@ -36,7 +36,7 @@ current = false
 fov = 65.0
 size = 1.0
 near = 0.1
-far = 100.0
+far = 15.0
 _sections_unfolded = [ "Transform" ]
 
 

@@ -26,8 +26,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 820.0
-margin_bottom = 600.0
+margin_right = 1540.0
+margin_bottom = 860.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -43,7 +43,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 820.0
+margin_right = 1540.0
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -66,10 +66,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = 50.0
-margin_right = 210.0
-margin_bottom = 280.0
+margin_left = 140.0
+margin_top = 130.0
+margin_right = 340.0
+margin_bottom = 360.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -84,8 +84,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1540.0
+margin_bottom = 860.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -95,6 +95,11 @@ size_flags_vertical = 1
 
 [node name="PlayerButton1" parent="PlayerButtons" index="0" instance=ExtResource( 3 )]
 
+editor/display_folded = true
+margin_left = 150.0
+margin_top = 140.0
+margin_right = 330.0
+margin_bottom = 300.0
 _sections_unfolded = [ "Material", "Visibility" ]
 numID = 1
 
@@ -104,8 +109,11 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="PlayerButton2" parent="PlayerButtons" index="1" instance=ExtResource( 3 )]
 
-margin_left = 220.0
-margin_right = 400.0
+editor/display_folded = true
+margin_left = 510.0
+margin_top = 140.0
+margin_right = 690.0
+margin_bottom = 300.0
 _sections_unfolded = [ "Material", "Visibility" ]
 numID = 2
 
@@ -119,8 +127,11 @@ color = Color( 0.304077, 0.734375, 0.431822, 0.414353 )
 
 [node name="PlayerButton3" parent="PlayerButtons" index="2" instance=ExtResource( 3 )]
 
-margin_left = 420.0
-margin_right = 600.0
+editor/display_folded = true
+margin_left = 870.0
+margin_top = 140.0
+margin_right = 1050.0
+margin_bottom = 300.0
 numID = 3
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton3" index="3"]
@@ -133,8 +144,11 @@ color = Color( 0.734375, 0.697396, 0.304077, 0.414353 )
 
 [node name="PlayerButton4" parent="PlayerButtons" index="3" instance=ExtResource( 3 )]
 
-margin_left = 620.0
-margin_right = 800.0
+editor/display_folded = true
+margin_left = 1230.0
+margin_top = 140.0
+margin_right = 1410.0
+margin_bottom = 300.0
 numID = 4
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton4" index="3"]
@@ -147,8 +161,11 @@ color = Color( 0.734375, 0.334332, 0.304077, 0.414353 )
 
 [node name="PlayerButton5" parent="PlayerButtons" index="4" instance=ExtResource( 3 )]
 
-margin_top = 290.0
-margin_bottom = 500.0
+editor/display_folded = true
+margin_left = 150.0
+margin_top = 440.0
+margin_right = 330.0
+margin_bottom = 650.0
 numID = 5
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton5" index="3"]
@@ -161,10 +178,11 @@ color = Color( 0.734375, 0.304077, 0.717566, 0.414353 )
 
 [node name="PlayerButton6" parent="PlayerButtons" index="5" instance=ExtResource( 3 )]
 
-margin_left = 220.0
-margin_top = 290.0
-margin_right = 400.0
-margin_bottom = 500.0
+editor/display_folded = true
+margin_left = 510.0
+margin_top = 440.0
+margin_right = 690.0
+margin_bottom = 650.0
 numID = 6
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton6" index="3"]
@@ -177,10 +195,11 @@ color = Color( 0.124878, 0.726563, 0.698359, 0.414353 )
 
 [node name="PlayerButton7" parent="PlayerButtons" index="6" instance=ExtResource( 3 )]
 
-margin_left = 420.0
-margin_top = 290.0
-margin_right = 600.0
-margin_bottom = 500.0
+editor/display_folded = true
+margin_left = 870.0
+margin_top = 440.0
+margin_right = 1050.0
+margin_bottom = 650.0
 numID = 7
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton7" index="3"]
@@ -193,10 +212,11 @@ color = Color( 1, 1, 1, 0.414353 )
 
 [node name="PlayerButton8" parent="PlayerButtons" index="7" instance=ExtResource( 3 )]
 
-margin_left = 620.0
-margin_top = 290.0
-margin_right = 800.0
-margin_bottom = 500.0
+editor/display_folded = true
+margin_left = 1230.0
+margin_top = 440.0
+margin_right = 1410.0
+margin_bottom = 650.0
 numID = 8
 
 [node name="PlayerName" parent="PlayerButtons/PlayerButton8" index="3"]
@@ -215,10 +235,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 310.0
-margin_top = 510.0
-margin_right = 510.0
-margin_bottom = 590.0
+margin_left = 670.0
+margin_top = 740.0
+margin_right = 870.0
+margin_bottom = 820.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -233,10 +253,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 320.0
-margin_top = 520.0
-margin_right = 500.0
-margin_bottom = 582.0
+margin_left = 680.0
+margin_top = 750.0
+margin_right = 860.0
+margin_bottom = 812.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

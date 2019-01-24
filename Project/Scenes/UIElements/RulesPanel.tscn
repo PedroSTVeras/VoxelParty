@@ -26,8 +26,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 820.0
-margin_bottom = 600.0
+margin_right = 1540.0
+margin_bottom = 860.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -43,7 +43,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 820.0
+margin_right = 1540.0
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -66,10 +66,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 140.0
-margin_top = 80.0
-margin_right = 680.0
-margin_bottom = 160.0
+margin_left = 500.0
+margin_top = 100.0
+margin_right = 1040.0
+margin_bottom = 180.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -84,9 +84,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 10.0
-margin_right = 40.0
-margin_bottom = 50.0
+margin_right = 1540.0
+margin_bottom = 860.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -94,26 +93,22 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="Stats" parent="AllStats" index="0" instance=ExtResource( 3 )]
+[node name="Stats1" parent="AllStats" index="0" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-margin_left = 150.0
-margin_top = 80.0
-margin_right = 670.0
-margin_bottom = 140.0
+margin_left = 510.0
+margin_top = 110.0
+margin_right = 1030.0
+margin_bottom = 170.0
 _sections_unfolded = [ "Rect" ]
-
-[node name="StatName" parent="AllStats/Stats" index="1"]
-
-text = "Modes"
 
 [node name="Stats2" parent="AllStats" index="1" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-margin_left = 150.0
-margin_top = 160.0
-margin_right = 670.0
-margin_bottom = 220.0
+margin_left = 510.0
+margin_top = 240.0
+margin_right = 1030.0
+margin_bottom = 300.0
 
 [node name="StatName" parent="AllStats/Stats2" index="1"]
 
@@ -122,10 +117,10 @@ text = "Turns"
 [node name="Stats3" parent="AllStats" index="2" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-margin_left = 150.0
-margin_top = 240.0
-margin_right = 670.0
-margin_bottom = 300.0
+margin_left = 510.0
+margin_top = 370.0
+margin_right = 1030.0
+margin_bottom = 430.0
 
 [node name="StatName" parent="AllStats/Stats3" index="1"]
 
@@ -134,10 +129,10 @@ text = "Lives"
 [node name="Stats4" parent="AllStats" index="3" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-margin_left = 150.0
-margin_top = 320.0
-margin_right = 670.0
-margin_bottom = 380.0
+margin_left = 510.0
+margin_top = 500.0
+margin_right = 1030.0
+margin_bottom = 560.0
 
 [node name="StatName" parent="AllStats/Stats4" index="1"]
 
@@ -146,10 +141,10 @@ text = "Order"
 [node name="Stats5" parent="AllStats" index="4" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-margin_left = 150.0
-margin_top = 400.0
-margin_right = 670.0
-margin_bottom = 460.0
+margin_left = 510.0
+margin_top = 630.0
+margin_right = 1030.0
+margin_bottom = 690.0
 
 [node name="StatName" parent="AllStats/Stats5" index="1"]
 
@@ -163,10 +158,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 310.0
-margin_top = 510.0
-margin_right = 510.0
-margin_bottom = 590.0
+margin_left = 670.0
+margin_top = 740.0
+margin_right = 870.0
+margin_bottom = 820.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -181,10 +176,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 320.0
-margin_top = 520.0
-margin_right = 500.0
-margin_bottom = 582.0
+margin_left = 680.0
+margin_top = 750.0
+margin_right = 860.0
+margin_bottom = 812.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -203,7 +198,6 @@ align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_fonts" ]
 
 
-[editable path="AllStats/Stats"]
 [editable path="AllStats/Stats2"]
 [editable path="AllStats/Stats3"]
 [editable path="AllStats/Stats4"]

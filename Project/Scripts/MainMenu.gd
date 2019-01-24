@@ -31,7 +31,16 @@ func _process(delta):
 			buttonNum = 0
 	
 	#Move arrow
-	arrow.rect_position.y = 220 + buttonNum * 70;
+	if buttonNum == 0:
+		arrow.rect_position = playButton.rect_position + Vector2(-10,-10)
+	elif buttonNum == 1:
+		arrow.rect_position = miniGamesButton.rect_position + Vector2(-10,-10)
+	elif buttonNum == 2:
+		arrow.rect_position = profilesButton.rect_position + Vector2(-10,-10)
+	elif buttonNum == 3:
+		arrow.rect_position = optionsButton.rect_position + Vector2(-10,-10)
+	elif buttonNum == 4:
+		arrow.rect_position = exitButton.rect_position + Vector2(-10,-10)
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):

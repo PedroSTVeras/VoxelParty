@@ -23,7 +23,9 @@ func _process(delta):
 			row = 0
 	
 	#Move arrow
-	selectPanel.rect_position.y = 80 + row * 80;
+	if get_node("AllStats/Stats"+str(1+row)) != null:
+		selectPanel.rect_position = get_node("AllStats/Stats"+str(1+row)).rect_position + Vector2(-10,-10)
+	#selectPanel.rect_position.y = 80 + row * 80;
 	if row == 5:
 		selectPanel.hide()
 		selectPanel2.show()
