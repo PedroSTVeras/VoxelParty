@@ -34,8 +34,6 @@ func _process(delta):
 	#Move arrow
 	if get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))) != null:
 		selectPanel.rect_position = get_node("PlayerButtons/PlayerButton"+str(1+column+(row*4))).rect_position + Vector2(-10,-10)
-	#selectPanel.rect_position.x = 10 + column * 200;
-	#selectPanel.rect_position.y = 50 + row * 230;
 	if row == 2:
 		selectPanel.hide()
 		selectPanel2.show()

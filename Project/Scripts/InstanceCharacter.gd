@@ -1,9 +1,9 @@
 extends Spatial
 
 #Character models prefab
-var Knight = preload("res://Scenes/Characters/Knight.tscn")
-var RedSkull = preload("res://Scenes/Characters/RedSkull.tscn")
-var Hero = preload("res://Scenes/Characters/Hero.tscn")
+var Knight = preload("res://Scenes/Objects/Characters/Knight.tscn")
+var RedSkull = preload("res://Scenes/Objects/Characters/RedSkull.tscn")
+var Hero = preload("res://Scenes/Objects/Characters/Hero.tscn")
 
 #Player profile prefab
 var profile = preload("res://Scenes/UIElements/PlayerProfile.tscn")
@@ -34,11 +34,14 @@ func _ready():
 				players[num].model = Hero.instance()
 				AdjustChar(num)
 			
+			#Set color and model ID
+			players[num].colorID = aux +1
+			players[num].modelID = Global.chosenModelPlayers[aux]
+			
 			#Instance profiles
 			players[num].profile = profile.instance()
 			players[num].profile.num = num
-			players[num].colorID = aux +1
-			players[num].modelID = Global.chosenModelPlayers[aux]
+			
 			#Set positon
 			players[num].profile.rect_position += Vector2(20 + 425*num, 720)
 			if num >= 4:
@@ -47,7 +50,7 @@ func _ready():
 			num +=1
 	pass
 
-#Adds characters to scene and properlyplaces them in the scene
+#Adds characters to scene and properly places them in the scene
 func AdjustChar(var aux):
 	add_child(players[aux].model)
 	players[aux].model.rotation_degrees.y = 90
