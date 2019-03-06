@@ -24,29 +24,27 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_leftJoy_up") || Input.is_action_just_pressed("ui_up"):
 		buttonNum -= 1
 		if buttonNum <= -1:
-			buttonNum = 4
+			buttonNum = 2
 	if Input.is_action_just_pressed("ui_leftJoy_down") || Input.is_action_just_pressed("ui_down"):
 		buttonNum += 1
-		if buttonNum >= 5:
+		if buttonNum >= 3:
 			buttonNum = 0
 	
 	#Move arrow
 	if buttonNum == 0:
 		arrow.rect_position = playButton.rect_position + Vector2(-10,-10)
 	elif buttonNum == 1:
-		arrow.rect_position = miniGamesButton.rect_position + Vector2(-10,-10)
-	elif buttonNum == 2:
-		arrow.rect_position = profilesButton.rect_position + Vector2(-10,-10)
-	elif buttonNum == 3:
 		arrow.rect_position = optionsButton.rect_position + Vector2(-10,-10)
-	elif buttonNum == 4:
+		#arrow.rect_position = miniGamesButton.rect_position + Vector2(-10,-10)
+	elif buttonNum == 2:
 		arrow.rect_position = exitButton.rect_position + Vector2(-10,-10)
+		#arrow.rect_position = profilesButton.rect_position + Vector2(-10,-10)
 	
 	#Activate selected button
 	if Input.is_action_just_pressed("ui_A"):
 		if buttonNum == 0:
 			PlayGame()
-		elif buttonNum == 4:
+		elif buttonNum == 2:
 			ExitGame()
 	
 	pass
