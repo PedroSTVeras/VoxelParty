@@ -8,7 +8,7 @@ onready var optionsButton = $Buttons/Options
 onready var exitButton = $Buttons/Exit
 
 #Arrow
-onready var arrow = $Panel
+onready var arrow = $SelectPanel
 
 #Selected Button
 var buttonNum = 0
