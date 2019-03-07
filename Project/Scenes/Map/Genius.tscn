@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/Objects/Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -510,15 +510,12 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light" ]
 
-[node name="TestMap2" type="Spatial"]
+[node name="Genius" type="Spatial" index="0"]
 
 [node name="Map" type="Spatial" parent="." index="0"]
 
-editor/display_folded = true
-
 [node name="Wall1" type="StaticBody" parent="Map" index="0"]
 
-editor/display_folded = true
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 16
@@ -847,12 +844,12 @@ size = 1.0
 near = 0.05
 far = 1000.0
 
-[node name="Player" parent="." index="2" instance=ExtResource( 1 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 9, 100 )
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
 environment = SubResource( 11 )
+
+[node name="Player" parent="." index="3" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.223, 14.6434, 99.8755 )
 
 

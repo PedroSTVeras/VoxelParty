@@ -45,7 +45,7 @@ func _process(delta):
 
 #Play game (load map/create character)
 func NextScreen():
-	get_tree().change_scene("res://Scenes/Map/TestMap2.tscn");
+	get_tree().change_scene("res://Scenes/Map/Genius.tscn");
 
 func PrevScreen():
 	get_tree().change_scene("res://Scenes/Menus/PlayerSelectMenu.tscn");

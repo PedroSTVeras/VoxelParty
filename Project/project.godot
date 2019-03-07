@@ -10,9 +10,9 @@ config_version=3
 
 [application]
 
-config/name="Voxel Maze"
+config/name="Voxel Party"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
-config/icon="res://Sprites/RedSkullIcon.png"
+config/icon="res://Sprites/icon.png"
 
 [autoload]
 
@@ -111,6 +111,8 @@ ui_fullscreen=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_n
 
 3d_physics/layer_2="Dice"
 3d_physics/layer_3="Force"
+3d_physics/layer_4="Player"
+3d_physics/layer_5="Walls"
 
 [rendering]
 
