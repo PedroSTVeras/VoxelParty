@@ -8,7 +8,7 @@
 
 extents = Vector3( 6.50351, 2.53532, 10.5568 )
 
-[node name="Player" type="KinematicBody" groups=[
+[node name="Player" type="KinematicBody" index="0" groups=[
 "Player",
 ]]
 

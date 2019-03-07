@@ -510,7 +510,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light" ]
 
-[node name="TestMap2" type="Spatial" index="0"]
+[node name="TestMap2" type="Spatial"]
 
 [node name="Map" type="Spatial" parent="." index="0"]
 

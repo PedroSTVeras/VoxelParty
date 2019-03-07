@@ -85,7 +85,7 @@ func movement(delta):
 		cs.rotation_degrees.y = model.rotation_degrees.y
 		
 		#Ataque com espada
-		if Input.is_action_just_pressed("ui_A"):
+		if Input.is_action_just_pressed("ui_X"):
 			currentSword = sword.instance()
 			add_child(currentSword)
 			currentSword.rotate_y(deg2rad(swordDir))
