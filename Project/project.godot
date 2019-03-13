@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Voxel Party"
+config/name="Voxel Party (OLD)"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/icon="res://Sprites/icon.png"
 
